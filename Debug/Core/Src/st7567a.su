@@ -1,0 +1,14 @@
+../Core/Src/st7567a.c:54:6:st7567a_Reset	8	static
+../Core/Src/st7567a.c:61:6:st7567a_WriteCommand	16	static
+../Core/Src/st7567a.c:68:6:st7567a_WriteData	16	static
+../Core/Src/st7567a.c:76:6:st7567a_Init	8	static
+../Core/Src/st7567a.c:96:6:st7567a_Fill	24	static
+../Core/Src/st7567a.c:104:6:st7567a_Display	16	static
+../Core/Src/st7567a.c:117:6:st7567a_SetContrast	16	static
+../Core/Src/st7567a.c:122:6:st7567a_PowerSave	16	static
+../Core/Src/st7567a.c:133:6:st7567a_DrawPixel	24	static
+../Core/Src/st7567a.c:146:6:st7567a_DrawVLine	24	static
+../Core/Src/st7567a.c:159:6:st7567a_DrawHLine	32	static
+../Core/Src/st7567a.c:173:6:st7567a_SetCursor	16	static
+../Core/Src/st7567a.c:178:6:st7567a_WriteChar	48	static
+../Core/Src/st7567a.c:223:6:st7567a_WriteString	32	static
