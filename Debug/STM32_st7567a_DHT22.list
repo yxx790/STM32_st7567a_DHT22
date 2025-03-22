@@ -5878,9 +5878,9 @@ void SystemClock_Config(void)
  8002cfc:	003b      	movs	r3, r7
  8002cfe:	2202      	movs	r2, #2
  8002d00:	605a      	str	r2, [r3, #4]
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV2;
  8002d02:	003b      	movs	r3, r7
- 8002d04:	2200      	movs	r2, #0
+ 8002d04:	2280      	movs	r2, #128	@ 0x80
  8002d06:	609a      	str	r2, [r3, #8]
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
  8002d08:	003b      	movs	r3, r7
