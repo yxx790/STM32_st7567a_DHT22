@@ -55,6 +55,9 @@ STM32_st7567a_DHT22.list \
 OBJCOPY_HEX += \
 STM32_st7567a_DHT22.hex \
 
+OBJCOPY_BIN += \
+STM32_st7567a_DHT22.bin \
+
 
 # All Target
 all: main-build
@@ -83,12 +86,17 @@ STM32_st7567a_DHT22.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DE
 	@echo 'Finished building: $@'
 	@echo ' '
 
+STM32_st7567a_DHT22.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "STM32_st7567a_DHT22.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) STM32_st7567a_DHT22.elf STM32_st7567a_DHT22.hex STM32_st7567a_DHT22.list STM32_st7567a_DHT22.map default.size.stdout
+	-$(RM) STM32_st7567a_DHT22.bin STM32_st7567a_DHT22.elf STM32_st7567a_DHT22.hex STM32_st7567a_DHT22.list STM32_st7567a_DHT22.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

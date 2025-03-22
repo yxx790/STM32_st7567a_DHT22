@@ -99,8 +99,8 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   st7567a_Init();
-
   static DHT_sensor livingRoom = {GPIOA, GPIO_PIN_0, DHT22, GPIO_PULLUP};
+  HAL_Delay(1000);
 
   void lcd(uint8_t x, uint8_t y, uint8_t font, char msg[]){
 	  st7567a_SetCursor(x, y);
